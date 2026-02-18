@@ -21,21 +21,10 @@ export function LoginForm() {
           bg-[rgba(11,11,12,0.72)] backdrop-blur-[22px]
           border border-[rgba(255,255,255,0.10)]
           shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_30px_80px_rgba(0,0,0,0.16)]
-          dark:bg-[#111113] dark:border-[rgba(255,255,255,0.08)] dark:backdrop-blur-none
+          dark:bg-[rgba(17,17,19,0.85)] dark:border-[rgba(255,255,255,0.08)]
           dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_30px_80px_rgba(0,0,0,0.5)]"
+        style={{ WebkitBackdropFilter: "blur(22px)" }}
       >
-        {/* Logo inside card */}
-        <div className="mb-8 flex justify-center">
-          <div className="flex items-center gap-0 select-none">
-            <span className="rounded-md bg-[#FAFAFA] px-2.5 py-1 text-sm font-bold tracking-[0.15em] text-[#0B0B0C]">
-              JECT
-            </span>
-            <span className="px-2.5 py-1 text-sm font-bold tracking-[0.15em] text-[#FAFAFA]">
-              STORE
-            </span>
-          </div>
-        </div>
-
         {/* Title */}
         <div className="mb-8 text-center">
           <h1 className="text-2xl font-semibold tracking-tight text-[#FFFFFF] dark:text-[#FAFAFA]">
