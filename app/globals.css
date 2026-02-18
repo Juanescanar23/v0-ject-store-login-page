@@ -123,3 +123,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.login-bg {
+  background: radial-gradient(700px 700px at 70% 35%, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.00) 60%), #FFFFFF;
+}
+
+.dark .login-bg {
+  background: radial-gradient(700px 700px at 70% 35%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.00) 60%), #0B0B0C;
+}

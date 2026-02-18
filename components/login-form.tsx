@@ -17,20 +17,21 @@ export function LoginForm() {
     <div className="relative w-full max-w-[440px]">
       {/* Glass Card - Apple-like charcoal glass */}
       <div
-        className="relative rounded-[28px] px-8 py-9 sm:px-9 sm:py-10
-          bg-[rgba(11,11,12,0.72)] backdrop-blur-[22px]
-          border border-[rgba(255,255,255,0.10)]
-          shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_30px_80px_rgba(0,0,0,0.16)]
-          dark:bg-[rgba(17,17,19,0.85)] dark:border-[rgba(255,255,255,0.08)]
-          dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_30px_80px_rgba(0,0,0,0.5)]"
-        style={{ WebkitBackdropFilter: "blur(22px)" }}
+        className="relative rounded-[30px] px-8 py-9 sm:px-9 sm:py-10
+          border border-[rgba(255,255,255,0.14)]"
+        style={{
+          background: "rgba(10,10,11,0.62)",
+          backdropFilter: "blur(28px) saturate(120%)",
+          WebkitBackdropFilter: "blur(28px) saturate(120%)",
+          boxShadow: "0 60px 140px rgba(0,0,0,0.22), 0 20px 60px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.10), inset 0 -1px 0 rgba(255,255,255,0.06)",
+        }}
       >
         {/* Title */}
         <div className="mb-8 text-center">
-          <h1 className="text-2xl font-semibold tracking-tight text-[#FFFFFF] dark:text-[#FAFAFA]">
+          <h1 className="text-2xl font-semibold tracking-tight text-[#FFFFFF]">
             Iniciar sesion
           </h1>
-          <p className="mt-2 text-sm text-[rgba(255,255,255,0.50)] dark:text-[rgba(255,255,255,0.45)]">
+          <p className="mt-2 text-sm text-[rgba(255,255,255,0.50)]">
             Accede al Portal Central de JectStore
           </p>
         </div>
@@ -40,7 +41,7 @@ export function LoginForm() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="email"
-              className="text-xs font-medium uppercase tracking-wider text-[rgba(255,255,255,0.50)] dark:text-[rgba(255,255,255,0.45)]"
+              className="text-xs font-medium uppercase tracking-wider text-[rgba(255,255,255,0.50)]"
             >
               Email
             </label>
@@ -50,8 +51,7 @@ export function LoginForm() {
               placeholder="tu@email.com"
               autoComplete="email"
               required
-              className="h-12 w-full rounded-[14px] border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.08)] px-4 text-sm text-[#FFFFFF] placeholder:text-[rgba(255,255,255,0.45)] outline-none transition-all focus:border-[rgba(255,255,255,0.22)] focus:bg-[rgba(255,255,255,0.12)]
-                dark:border-[rgba(255,255,255,0.08)] dark:bg-[rgba(255,255,255,0.06)] dark:text-[#FAFAFA] dark:placeholder:text-[rgba(255,255,255,0.40)] dark:focus:border-[rgba(255,255,255,0.18)] dark:focus:bg-[rgba(255,255,255,0.10)]"
+              className="h-12 w-full rounded-[14px] border border-[rgba(255,255,255,0.14)] bg-[rgba(255,255,255,0.10)] px-4 text-sm text-[#FFFFFF] placeholder:text-[rgba(255,255,255,0.45)] outline-none transition-all focus:outline-2 focus:outline-[rgba(255,255,255,0.22)] focus:border-transparent focus:bg-[rgba(255,255,255,0.12)]"
             />
           </div>
 
@@ -59,7 +59,7 @@ export function LoginForm() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="password"
-              className="text-xs font-medium uppercase tracking-wider text-[rgba(255,255,255,0.50)] dark:text-[rgba(255,255,255,0.45)]"
+              className="text-xs font-medium uppercase tracking-wider text-[rgba(255,255,255,0.50)]"
             >
               Contrasena
             </label>
@@ -70,13 +70,12 @@ export function LoginForm() {
                 placeholder="••••••••••"
                 autoComplete="current-password"
                 required
-                className="h-12 w-full rounded-[14px] border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.08)] px-4 pr-12 text-sm text-[#FFFFFF] placeholder:text-[rgba(255,255,255,0.45)] outline-none transition-all focus:border-[rgba(255,255,255,0.22)] focus:bg-[rgba(255,255,255,0.12)]
-                  dark:border-[rgba(255,255,255,0.08)] dark:bg-[rgba(255,255,255,0.06)] dark:text-[#FAFAFA] dark:placeholder:text-[rgba(255,255,255,0.40)] dark:focus:border-[rgba(255,255,255,0.18)] dark:focus:bg-[rgba(255,255,255,0.10)]"
+                className="h-12 w-full rounded-[14px] border border-[rgba(255,255,255,0.14)] bg-[rgba(255,255,255,0.10)] px-4 pr-12 text-sm text-[#FFFFFF] placeholder:text-[rgba(255,255,255,0.45)] outline-none transition-all focus:outline-2 focus:outline-[rgba(255,255,255,0.22)] focus:border-transparent focus:bg-[rgba(255,255,255,0.12)]"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-[rgba(255,255,255,0.40)] transition-colors hover:text-[rgba(255,255,255,0.70)] dark:text-[rgba(255,255,255,0.35)] dark:hover:text-[rgba(255,255,255,0.65)]"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-[rgba(255,255,255,0.40)] transition-colors hover:text-[rgba(255,255,255,0.70)]"
                 aria-label={showPassword ? "Ocultar contrasena" : "Mostrar contrasena"}
               >
                 {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
@@ -85,7 +84,7 @@ export function LoginForm() {
             <div className="flex justify-end">
               <a
                 href="#"
-                className="text-xs text-[rgba(255,255,255,0.45)] transition-colors hover:text-[rgba(255,255,255,0.80)] dark:text-[rgba(255,255,255,0.40)] dark:hover:text-[rgba(255,255,255,0.75)]"
+                className="text-xs text-[rgba(255,255,255,0.45)] transition-colors hover:text-[rgba(255,255,255,0.80)]"
               >
                 {"Olvidaste tu contrasena?"}
               </a>
@@ -96,8 +95,7 @@ export function LoginForm() {
           <button
             type="submit"
             disabled={isLoading}
-            className="group mt-1 flex h-12 w-full items-center justify-center gap-2 rounded-[14px] bg-[#FAFAFA] text-sm font-semibold text-[#0B0B0C] transition-all hover:bg-[#E4E4E7] disabled:opacity-50
-              dark:bg-[#FAFAFA] dark:text-[#0B0B0C] dark:hover:bg-[#D4D4D8]"
+            className="group mt-1 flex h-12 w-full items-center justify-center gap-2 rounded-[14px] bg-[#FAFAFA] text-sm font-semibold text-[#0B0B0C] transition-all hover:bg-[#E4E4E7] disabled:opacity-50"
           >
             {isLoading ? (
               <div className="size-4 animate-spin rounded-full border-2 border-[#0B0B0C]/20 border-t-[#0B0B0C]" />
@@ -111,16 +109,15 @@ export function LoginForm() {
 
           {/* Divider */}
           <div className="flex items-center gap-4">
-            <div className="h-px flex-1 bg-[rgba(255,255,255,0.08)] dark:bg-[rgba(255,255,255,0.06)]" />
-            <span className="text-xs text-[rgba(255,255,255,0.35)] dark:text-[rgba(255,255,255,0.30)]">o</span>
-            <div className="h-px flex-1 bg-[rgba(255,255,255,0.08)] dark:bg-[rgba(255,255,255,0.06)]" />
+            <div className="h-px flex-1 bg-[rgba(255,255,255,0.08)]" />
+            <span className="text-xs text-[rgba(255,255,255,0.35)]">o</span>
+            <div className="h-px flex-1 bg-[rgba(255,255,255,0.08)]" />
           </div>
 
           {/* Google Button */}
           <button
             type="button"
-            className="flex h-12 w-full items-center justify-center gap-3 rounded-[14px] border border-[rgba(255,255,255,0.10)] bg-transparent text-sm font-medium text-[rgba(255,255,255,0.60)] transition-all hover:border-[rgba(255,255,255,0.20)] hover:bg-[rgba(255,255,255,0.04)] hover:text-[rgba(255,255,255,0.85)]
-              dark:border-[rgba(255,255,255,0.08)] dark:text-[rgba(255,255,255,0.55)] dark:hover:border-[rgba(255,255,255,0.16)] dark:hover:bg-[rgba(255,255,255,0.04)] dark:hover:text-[rgba(255,255,255,0.80)]"
+            className="flex h-12 w-full items-center justify-center gap-3 rounded-[14px] border border-[rgba(255,255,255,0.14)] bg-transparent text-sm font-medium text-[rgba(255,255,255,0.60)] transition-all hover:border-[rgba(255,255,255,0.22)] hover:bg-[rgba(255,255,255,0.06)] hover:text-[rgba(255,255,255,0.85)]"
           >
             <svg className="size-4" viewBox="0 0 24 24" fill="none">
               <path
@@ -149,11 +146,11 @@ export function LoginForm() {
         </form>
 
         {/* Contact support */}
-        <p className="mt-8 text-center text-xs text-[rgba(255,255,255,0.35)] dark:text-[rgba(255,255,255,0.30)]">
+        <p className="mt-8 text-center text-xs text-[rgba(255,255,255,0.35)]">
           {"Necesitas acceso? "}
           <a
             href="#"
-            className="font-medium text-[rgba(255,255,255,0.55)] underline-offset-4 transition-colors hover:text-[rgba(255,255,255,0.85)] hover:underline dark:text-[rgba(255,255,255,0.50)] dark:hover:text-[rgba(255,255,255,0.80)]"
+            className="font-medium text-[rgba(255,255,255,0.55)] underline-offset-4 transition-colors hover:text-[rgba(255,255,255,0.85)] hover:underline"
           >
             Contacta soporte
           </a>

@@ -5,12 +5,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function LoginPage() {
   return (
-    <div
-      className="relative flex min-h-svh flex-col"
-      style={{
-        background: "radial-gradient(60% 60% at 70% 40%, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.00) 60%), var(--background)",
-      }}
-    >
+    <div className="login-bg relative flex min-h-svh flex-col">
       {/* Theme Toggle */}
       <div className="absolute right-6 top-6 z-10">
         <ThemeToggle />
