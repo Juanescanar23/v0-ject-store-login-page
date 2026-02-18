@@ -4,6 +4,7 @@ import { LoginFooter } from "@/components/login-footer"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function LoginPage() {
+  // JectStore login
   return (
     <div className="relative flex min-h-svh flex-col bg-background">
       {/* Theme Toggle */}
